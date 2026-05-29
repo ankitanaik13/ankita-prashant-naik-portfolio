@@ -88,7 +88,7 @@ body {
 /* ─── LAYOUT ─── */
 .layout {
   display: grid;
-  grid-template-columns: 3.5fr 10fr;
+  grid-template-columns: 3.8fr 10fr;
   min-height: 100vh;
   position: relative;
   z-index: 1;
@@ -707,7 +707,7 @@ body {
 /* ─── RESPONSIVE — LARGE SCREENS ─── */
 @media (min-width: 1400px) {
   .layout {
-    grid-template-columns: 3.5fr 10fr;
+    grid-template-columns: 3.8fr 10fr;
     max-width: 1600px;
     margin: 0 auto;
   }
@@ -717,7 +717,7 @@ body {
 
 /* ─── RESPONSIVE — TABLET ─── */
 @media (max-width: 1024px) {
-  .layout { grid-template-columns: 3.5fr 10fr; }
+  .layout { grid-template-columns: 3.8fr 10fr; }
   .left-panel { width: 25.9%; padding: 32px 20px; }
   .photo-ring { width: 140px; height: 140px; }
   .right-panel { padding: 40px 32px 60px; }
@@ -747,7 +747,7 @@ body {
   .project-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .toggle-btn { top: 16px; right: 16px; }
-  .bio { text-align: left; font-size: 13px; line-height: 1.7; padding: 0 4px; }
+  .bio { text-align: left !important; font-size: 13px; line-height: 1.8; padding: 0; word-spacing: normal; letter-spacing: normal; }
   .open-to { padding: 0 4px; }
   .open-to-tags { flex-wrap: wrap; gap: 6px; }
   .role-tag { font-size: 11px; }
@@ -757,6 +757,9 @@ body {
   .lft-nav { justify-content: center; }
   .divider { width: 100%; }
   .stats { width: 100%; }
+  .bio-list { text-align: left !important; padding-left: 16px; }
+  .bio-list li { text-align: left !important; }
+  p.bio, .bio * { text-align: left !important; }
   .stat-chip { flex-direction: row; }
   footer { margin-left: 0; }
   .footer-links { flex-wrap: wrap; gap: 8px; }
