@@ -810,7 +810,7 @@ body {
 
     <!-- Bio -->
     <p class="bio">
-      Hi, I'm Ankita, a recent MS in Data Science graduate from Indiana University Bloomington with a Bachelor's in Information Science &amp; Engineering. My experience spans AI, machine learning, NLP, data engineering, and analytics across research and industry projects. At Project 990, I built Python and SQL pipelines processing 1.5M+ IRS records and a BART-based NLP workflow classifying 180K nonprofit mission statements. At Global Health Impact, I automated healthcare models across 217 countries, replacing manual Excel workflows with reproducible pipelines. I have also built AI-powered wellness apps, multi-agent LLM research workflows, and interactive dashboards on 20M+ record datasets. What excites me most is solving problems through a mix of analytical thinking, creativity, and technology.
+      Hi, I'm Ankita, a recent MS in Data Science graduate from Indiana University Bloomington with a Bachelor's in Information Science &amp; Engineering. My experience spans AI, machine learning, NLP, data engineering, and analytics across research and industry projects. At Project 990 Inc., I built Python and SQL pipelines processing 1.5M+ IRS records and a BART-based NLP workflow classifying 180K nonprofit mission statements. At Global Health Impact, I automated healthcare models across 217 countries, replacing manual Excel workflows with reproducible pipelines. I have also built AI-powered wellness apps, multi-agent LLM research workflows, and interactive dashboards on 20M+ record datasets. What excites me most is solving problems through a mix of analytical thinking, creativity, and technology.
     </p>
 
     <!-- Open to -->
@@ -1023,7 +1023,38 @@ body {
             </div>
           </div>
         </div>
+      
+      <!-- Flight ELT Pipeline -->
+      <div class="project-card fade-up">
+        <div class="project-img-area" style="padding:0;">
+          <div style="width:100%;height:220px;background:linear-gradient(135deg,#0f2a4a 0%,#1a3a5c 40%,#0d1f35 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+            <div style="text-align:center;z-index:1;">
+              <div style="font-size:48px;margin-bottom:8px;">✈️</div>
+              <div style="color:#60a5fa;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;">ELT Pipeline</div>
+              <div style="color:#93c5fd;font-size:11px;margin-top:4px;">Airflow · dbt · PostgreSQL · Docker</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-date">2025</div>
+          <div class="project-title">US Domestic Flight Delay Analytics Pipeline</div>
+          <p class="project-desc">Built an end-to-end <span style="color:#60a5fa;font-weight:700;">ELT pipeline</span> ingesting <span style="color:#38bdf8;font-weight:700;">547,271</span> US domestic flight records from the BTS API into <span style="color:#60a5fa;font-weight:700;">PostgreSQL</span> using <span style="color:#60a5fa;font-weight:700;">Apache Airflow</span>, <span style="color:#60a5fa;font-weight:700;">dbt</span>, and <span style="color:#60a5fa;font-weight:700;">Docker Compose</span> with a 3-layer transformation architecture (staging → intermediate → 4 analytical marts). Surfaced key insights from <span style="color:#38bdf8;font-weight:700;">15 airlines</span> and <span style="color:#38bdf8;font-weight:700;">334 airports</span> — Delta Air Lines ranked most reliable at <span style="color:#38bdf8;font-weight:700;">80.4%</span> on-time rate, Late Aircraft identified as #1 delay cause at <span style="color:#38bdf8;font-weight:700;">38.5%</span> — visualized in an interactive <span style="color:#60a5fa;font-weight:700;">Streamlit</span> dashboard.</p>
+          <div class="project-tags">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">Apache Airflow</span>
+            <span class="proj-tag">dbt</span>
+            <span class="proj-tag">PostgreSQL</span>
+            <span class="proj-tag">Docker</span>
+            <span class="proj-tag">Streamlit</span>
+            <span class="proj-tag">BTS API</span>
+          </div>
+          <a href="https://github.com/ankitanaik13/flight-elt-pipeline" target="_blank" class="proj-github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
       </div>
+</div>
 
     </section>
 
@@ -1038,7 +1069,7 @@ body {
         <div>
           <div class="exp-period">AUG 2025 – PRESENT</div>
           <div class="exp-role">Data Scientist</div>
-          <div class="exp-org">Project 990 · Bloomington, Indiana</div>
+          <div class="exp-org">Project 990 Inc. · Bloomington, Indiana</div>
           <ul class="exp-bullets">
             <li>Built a <span style="color:#60a5fa;font-weight:700;">BART</span>-based zero-shot <span style="color:#60a5fa;font-weight:700;">NLP pipeline</span> in <span style="color:#60a5fa;font-weight:700;">Python</span> to classify ~<span style="color:#38bdf8;font-weight:700;">180K</span> IRS 990-EZ nonprofit mission statements and generate faith-specific features for foundation network mapping across the United States.</li>
             <li>Built an end-to-end data pipeline using <span style="color:#60a5fa;font-weight:700;">Python</span> and <span style="color:#60a5fa;font-weight:700;">SQL</span> to process <span style="color:#38bdf8;font-weight:700;">1.5M+</span> IRS Form 990 financial records, transforming raw filings into a standardized schema loaded into a <span style="color:#60a5fa;font-weight:700;">MySQL</span> database for downstream analytics.</li>
@@ -1122,7 +1153,7 @@ body {
         <div class="skill-group fade-up">
           <div class="skill-group-title">Data Engineering</div>
           <div class="skill-tags">
-            <span class="skill-tag">ETL</span><span class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Snowflake</span>
+            <span class="skill-tag">ETL</span><span class="skill-tag">Apache Airflow</span><span class="skill-tag">dbt</span><span class="skill-tag">Docker</span><span class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Snowflake</span>
           </div>
         </div>
         <div class="skill-group fade-up">
