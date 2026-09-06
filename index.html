@@ -103,7 +103,10 @@ section:last-of-type { border-bottom: none; }
 
 /* ── PROJECTS ── */
 .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.proj-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: all 0.25s; display: flex; flex-direction: column; }
+.proj-card { order: 10; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: all 0.25s; display: flex; flex-direction: column; }
+.project-rank-1 { order: 1; }
+.project-rank-2 { order: 2; }
+.project-rank-3 { order: 3; }
 .proj-card:hover { box-shadow: var(--shadow-hover); border-color: var(--accent-mid); transform: translateY(-2px); }
 .proj-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .proj-date { font-size: 11.5px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -377,7 +380,7 @@ body { transition: background 0.3s, color 0.3s; }
         <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">RFM Segmentation</span><span class="proj-tag">Cohort Analysis</span><span class="proj-tag">Scikit-learn</span><span class="proj-tag">Pandas</span></div>
       </div>
 
-      <div class="proj-card fade-up">
+      <div class="proj-card fade-up project-rank-3">
         <div class="proj-top">
           <span class="proj-date">JUN 2026</span>
           <a href="https://github.com/ankitanaik13/natural-gas-pipeline-risk" target="_blank" class="proj-link-icon" title="GitHub">
@@ -389,7 +392,7 @@ body { transition: background 0.3s, color 0.3s; }
         <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">QGIS</span><span class="proj-tag">GeoPandas</span><span class="proj-tag">Random Forest</span><span class="proj-tag">SHAP</span><span class="proj-tag">MLflow</span></div>
       </div>
 
-      <div class="proj-card fade-up">
+      <div class="proj-card fade-up project-rank-2">
         <div class="proj-top">
           <span class="proj-date">AUG 2026</span>
           <a href="#" class="proj-link-icon" title="GitHub">
@@ -397,8 +400,8 @@ body { transition: background 0.3s, color 0.3s; }
           </a>
         </div>
         <div class="proj-title">AI-Powered Real-Time Transaction Fraud Detection Pipeline</div>
-        <div class="proj-desc">Built a real-time fraud-detection pipeline using Kafka and Spark Structured Streaming with per-account anomaly rules achieving 100% precision/recall on a 10K-event soak test. Generated confidence-calibrated LLM explanations via NVIDIA NIM and exposed account risk status as a callable MCP tool.</div>
-        <div class="proj-tags"><span class="proj-tag">Apache Kafka</span><span class="proj-tag">Apache Spark</span><span class="proj-tag">NVIDIA NIM</span><span class="proj-tag">MCP</span><span class="proj-tag">Python</span></div>
+        <div class="proj-desc">Built the complete event lifecycle: synthetic producer → Kafka → stateful Spark detection → idempotent PostgreSQL → explanation and MCP access. Improved velocity detection from 26.0% to 89.9% precision and from 28.0% to 61.6% recall by introducing Welford variance and an evaluated z-score threshold. Added reproducible engineering controls including detector/run isolation, a warm-up protocol, Wilson intervals, threshold sweeps, passing quality gates, 27 tests, 98.96% coverage, and GitHub Actions CI.</div>
+        <div class="proj-tags"><span class="proj-tag">Apache Kafka</span><span class="proj-tag">Apache Spark</span><span class="proj-tag">PostgreSQL</span><span class="proj-tag">MCP</span><span class="proj-tag">GitHub Actions</span></div>
       </div>
 
       <div class="proj-card fade-up">
@@ -423,14 +426,14 @@ body { transition: background 0.3s, color 0.3s; }
         <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Streamlit</span><span class="proj-tag">SQLite</span><span class="proj-tag">Anthropic API</span></div>
       </div>
 
-      <div class="proj-card fade-up">
+      <div class="proj-card fade-up project-rank-1">
         <div class="proj-top">
           <span class="proj-date">NOV 2025</span>
           <a href="https://github.com/ankitanaik13/AI-Agent-for-Deep-Research-Workflow" target="_blank" class="proj-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
         </div>
         <div class="proj-title">AI Agent for Deep Research Workflow</div>
-        <div class="proj-desc">Architected a 3-agent LLM workflow (research → writer → evaluator) using LlamaIndex, GPT-4o-mini, and Tavily web search for structured research report generation, with custom event-driven orchestration and self-reflection loops for iterative refinement.</div>
-        <div class="proj-tags"><span class="proj-tag">LlamaIndex</span><span class="proj-tag">GPT-4o-mini</span><span class="proj-tag">Tavily</span><span class="proj-tag">Multi-agent</span><span class="proj-tag">RAG</span></div>
+        <div class="proj-desc">Developed an AI research agent using LlamaIndex, Groq, Tavily, and FastAPI. The system breaks complex questions into focused searches, creates citation-grounded reports, and evaluates its answers through a researcher–writer–evaluator workflow. Added hallucination controls, bounded self-correction, Docker deployment, Prometheus monitoring, and automated CI testing.</div>
+        <div class="proj-tags"><span class="proj-tag">LlamaIndex</span><span class="proj-tag">Groq</span><span class="proj-tag">Tavily</span><span class="proj-tag">FastAPI</span><span class="proj-tag">Docker</span><span class="proj-tag">Prometheus</span></div>
       </div>
 
       <div class="proj-card fade-up">
@@ -451,16 +454,6 @@ body { transition: background 0.3s, color 0.3s; }
         <div class="proj-title">Spatio-Temporal Analysis of Air Quality &amp; Health Outcomes in California</div>
         <div class="proj-desc">Engineered a spatio-temporal data pipeline in R aggregating 10 years of county-level PM2.5 and ozone data across California. Built regression models incorporating socioeconomic features, improving R² from 0.007 to 0.537 in assessing pollution–asthma ED visit associations.</div>
         <div class="proj-tags"><span class="proj-tag">R</span><span class="proj-tag">dplyr</span><span class="proj-tag">ggplot2</span><span class="proj-tag">Regression</span><span class="proj-tag">Spatio-Temporal</span></div>
-      </div>
-
-      <div class="proj-card fade-up">
-        <div class="proj-top">
-          <span class="proj-date">JAN – MAY 2025</span>
-          <a href="#" class="proj-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-        </div>
-        <div class="proj-title">MindStat: Mental Health Analytics Platform</div>
-        <div class="proj-desc">Engineered dynamic data dashboards and an interactive analytics application tracking mental health metrics. Built with Flask, MongoDB, and Python with data visualization components for trend analysis and reporting.</div>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Flask</span><span class="proj-tag">MongoDB</span><span class="proj-tag">Data Visualization</span></div>
       </div>
 
     </div>
@@ -487,7 +480,7 @@ body { transition: background 0.3s, color 0.3s; }
       </div>
       <div class="skill-card fade-up">
         <div class="skill-cat">LLM &amp; Agents</div>
-        <div class="skill-tags"><span class="skill-tag">RAG</span><span class="skill-tag">LangChain</span><span class="skill-tag">LlamaIndex</span><span class="skill-tag">DSPy</span><span class="skill-tag">Chroma</span><span class="skill-tag">Vector Search</span><span class="skill-tag">MCP</span><span class="skill-tag">NVIDIA NIM</span></div>
+        <div class="skill-tags"><span class="skill-tag">RAG</span><span class="skill-tag">LangChain</span><span class="skill-tag">LangGraph</span><span class="skill-tag">AI Agents</span><span class="skill-tag">LlamaIndex</span><span class="skill-tag">DSPy</span><span class="skill-tag">Chroma</span><span class="skill-tag">Vector Search</span><span class="skill-tag">MCP</span><span class="skill-tag">NVIDIA NIM</span></div>
       </div>
       <div class="skill-card fade-up">
         <div class="skill-cat">Data Engineering</div>
@@ -503,7 +496,7 @@ body { transition: background 0.3s, color 0.3s; }
       </div>
       <div class="skill-card fade-up">
         <div class="skill-cat">Visualization &amp; Cloud</div>
-        <div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Streamlit</span><span class="skill-tag">Azure</span><span class="skill-tag">AWS</span><span class="skill-tag">GCP</span></div>
+        <div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Streamlit</span><span class="skill-tag">Azure</span></div>
       </div>
     </div>
   </div>
@@ -573,7 +566,7 @@ body { transition: background 0.3s, color 0.3s; }
       <div class="hobby-card fade-up"><div class="hobby-label">🥾 Hiking &amp; Exploring</div></div>
       <div class="hobby-card fade-up"><div class="hobby-label">📸 Nature Photography</div></div>
       <div class="hobby-card fade-up"><div class="hobby-label">🌿 Gardening</div></div>
-      <div class="hobby-card fade-up"><div class="hobby-label">🍳 Baking &amp; Cooking</div></div>
+      <div class="hobby-card fade-up"><div class="hobby-label">🧁 Baking &amp; Cooking</div></div>
     </div>
   </div>
 </section>
